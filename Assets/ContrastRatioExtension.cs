@@ -86,6 +86,7 @@ public static class ContrastRatioExtension
 
     private static float CalculateContrastRatio(float lum1, float lum2)
     {
+        // https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#key-terms
         if (lum1 > lum2)
         {
             return (lum1 + .05f) / (lum2 + .05f);
@@ -93,6 +94,7 @@ public static class ContrastRatioExtension
         return (lum2 + .05f) / (lum1 + .05f);
     }
 
+    // https://www.w3.org/WAI/GL/wiki/Relative_luminance
     private static float RelativeLuminance(Color32 color)
     {
         float r, g, b;
